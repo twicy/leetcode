@@ -3,6 +3,12 @@
 ```cpp
 class Solution {
 public:
+    unordered_map<string, function<int(int, int)>> op_map = {
+        {"+", [](int a, int b) {return a + b;}},
+        {"-", [](int a, int b) {return a - b;}},
+        {"*", [](int a, int b) {return a * b;}},
+        {"/", [](int a, int b) {return a / b;}}
+    };
     int evalRPN(vector<string>& tokens) {
         stack<int> s;
         int n1, n2;
@@ -16,15 +22,7 @@ public:
             s.pop();
             n1 = s.top();
             s.pop();
-            if (tokens[i] == "+") {
-                s.push(n1 + n2);
-            } else if (tokens[i] == "-") {
-                s.push(n1 - n2);
-            } else if (tokens[i] == "*") {
-                s.push(n1 * n2);
-            } else if (tokens[i] == "/") {
-                s.push(n1 / n2);
-            }
+            s.push(op_map[tokens[i]](n1, n2));
         }
         return s.top();
     }

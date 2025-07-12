@@ -4,22 +4,23 @@
 
 - In C++ is a 2D array continuous in memory? Yes
 - 704
+  - `(left <= right)`
+  - `right = mid - 1; left = mid + 1`
 - 27
 - 977
 - 209
 - Given an array, calculate the sum of elements in an interval
 - Given a 2D array, partition the array (horizontally/vertically) into two parts, so that their difference is smallest
 - 59
-- 1365 (*)
-- 
-* [941.有效的山脉数组](./problems/0941.有效的山脉数组.md)  （双指针）
-* [1207.独一无二的出现次数](./problems/1207.独一无二的出现次数.md) 数组在哈希法中的经典应用
-* [283.移动零](./problems/0283.移动零.md) 【数组】【双指针】
-* [189.旋转数组](./problems/0189.旋转数组.md)
-* [724.寻找数组的中心索引](./problems/0724.寻找数组的中心索引.md)
-* [34.在排序数组中查找元素的第一个和最后一个位置](./problems/0034.在排序数组中查找元素的第一个和最后一个位置.md) （二分法）
-* [922.按奇偶排序数组II](./problems/0922.按奇偶排序数组II.md) 
-* [35.搜索插入位置](./problems/0035.搜索插入位置.md)
+- 1365
+- 941
+- 1207
+- 283
+- 189
+- 724
+- 34
+- 922
+- 35
 
 ## Linked List
 
@@ -33,6 +34,7 @@
 - 142
 - 234
 - 143
+  - use deque to transform a linked list into an array(vector)
 
 ## HashMap
 
@@ -43,8 +45,8 @@
 - 1
 - 454
 - 383
-- 15 (*)
-- 18 (*)
+- 15
+- 18
 - 205
 
 ## String
@@ -55,9 +57,10 @@
 - 459
 - Given a string composed of numbers and lower-case letters, replace every number with the string "number"
 - Given a string, move last k characters to the front of the string
-- KMP (*)
-* [925.长按键入](./problems/0925.长按键入.md) 模拟匹配
-* [0844.比较含退格的字符串](./problems/0844.比较含退格的字符串.md)【栈模拟】【空间更优的双指针】
+- KMP
+- 925
+- 844
+  - back to front traverse
 
 ## Stack and Queue
 
@@ -66,17 +69,21 @@
 - 20
 - 1047
 - 150
+  - using functors is fantastic
 - 239
+  - design a mono queue
 - 347
+  - construct custom comparator
 - 739
-2. [单调栈：496.下一个更大元素I](./problems/0496.下一个更大元素I.md)
-3. [单调栈：503.下一个更大元素II](./problems/0503.下一个更大元素II.md)
-4. [单调栈：42.接雨水](./problems/0042.接雨水.md)
-5. [单调栈：84.柱状图中最大的矩形](./problems/0084.柱状图中最大的矩形.md)
+- 496
+- 503
+- 42
+- 84
 
 ## Binary Search Tree
 
 - 226
+  - try not use helper function
 - 101
 - 104
 - 111
@@ -92,45 +99,37 @@
 - 700
 - 98
 - 530
-26. [二叉树：501.二叉搜索树中的众数](./problems/0501.二叉搜索树中的众数.md)
-27. [二叉树：236.公共祖先问题](./problems/0236.二叉树的最近公共祖先.md)
-28. [本周小结！（二叉树）](./problems/周总结/20201017二叉树周末总结.md)
-29. [二叉树：235.搜索树的最近公共祖先](./problems/0235.二叉搜索树的最近公共祖先.md)
-30. [二叉树：701.搜索树中的插入操作](./problems/0701.二叉搜索树中的插入操作.md)
-31. [二叉树：450.搜索树中的删除操作](./problems/0450.删除二叉搜索树中的节点.md)
-32. [二叉树：669.修剪二叉搜索树](./problems/0669.修剪二叉搜索树.md)
-33. [二叉树：108.将有序数组转换为二叉搜索树](./problems/0108.将有序数组转换为二叉搜索树.md)
-34. [二叉树：538.把二叉搜索树转换为累加树](./problems/0538.把二叉搜索树转换为累加树.md)
-35. [二叉树：总结篇！（需要掌握的二叉树技能都在这里了）](./problems/二叉树总结篇.md)
-* [129.求根到叶子节点数字之和](./problems/0129.求根到叶子节点数字之和.md)
-* [1382.将二叉搜索树变平衡](./problems/1382.将二叉搜索树变平衡.md) 构造平衡二叉搜索树
-* [100.相同的树](./problems/0100.相同的树.md) 同101.对称二叉树 一个思路
-* [116.填充每个节点的下一个右侧节点指针](./problems/0116.填充每个节点的下一个右侧节点指针.md)
+- 501
+- 236
+- 235
+- 701
+- 450
+- 669
+- 108
+- 538
+- 129
+- 1382
+- 100
+- 116
 
 ## Backtracking
 
-1. [关于回溯算法，你该了解这些！](./problems/回溯算法理论基础.md)
-2. [回溯算法：77.组合](./problems/0077.组合.md)
-3. [回溯算法：77.组合优化](./problems/0077.组合优化.md)
-4. [回溯算法：216.组合总和III](./problems/0216.组合总和III.md)
-5. [回溯算法：17.电话号码的字母组合](./problems/0017.电话号码的字母组合.md)
-6. [本周小结！（回溯算法系列一）](./problems/周总结/20201030回溯周末总结.md)
-7. [回溯算法：39.组合总和](./problems/0039.组合总和.md)
-8. [回溯算法：40.组合总和II](./problems/0040.组合总和II.md)
-9. [回溯算法：131.分割回文串](./problems/0131.分割回文串.md)
-10. [回溯算法：93.复原IP地址](./problems/0093.复原IP地址.md)
-11. [回溯算法：78.子集](./problems/0078.子集.md)
-12. [本周小结！（回溯算法系列二）](./problems/周总结/20201107回溯周末总结.md)
-13. [回溯算法：90.子集II](./problems/0090.子集II.md)
-14. [回溯算法：491.递增子序列](./problems/0491.递增子序列.md)
-15. [回溯算法：46.全排列](./problems/0046.全排列.md)
+- 77
+- 216
+- 17
+- 39
+- 40
+- 131
+- 93
+- 78
+- 90
+- 491
+- 46
 16. [回溯算法：47.全排列II](./problems/0047.全排列II.md)
-17. [本周小结！（回溯算法系列三）](./problems/周总结/20201112回溯周末总结.md)
 18. [回溯算法去重问题的另一种写法](./problems/回溯算法去重问题的另一种写法.md)
 19. [回溯算法：332.重新安排行程](./problems/0332.重新安排行程.md)
 20. [回溯算法：51.N皇后](./problems/0051.N皇后.md)
 21. [回溯算法：37.解数独](./problems/0037.解数独.md)
-22. [回溯算法总结篇](./problems/回溯总结.md)
 * [52.N皇后II](./problems/0052.N皇后II.md)
 
 ## Greedy

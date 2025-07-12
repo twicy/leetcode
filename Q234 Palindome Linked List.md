@@ -14,28 +14,28 @@
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
-        stack<int> s;
-        ListNode *fast = head, *slow = head;
-        while (fast != NULL && fast->next != NULL) {
-            s.push(slow->val);
+        ListNode temp(0, head);
+        ListNode *slow = &temp, *fast = &temp;
+        stack<int> stk;
+
+        while (fast && fast->next) {
             slow = slow->next;
             fast = fast->next->next;
+            stk.push(slow->val);
         }
-        
-        if (slow == NULL) {
-            return true;
-        } else if (fast != NULL) { // odd number of nodes
+
+        if (fast == NULL) {
+            stk.pop();
+        }
+
+        while (slow && slow->next) {
             slow = slow->next;
-        }
-        while (slow != NULL) {
-            if (s.top() == slow->val) {
-                s.pop();
-                slow = slow->next;
-            } else {
+            if (stk.top() != slow->val) {
                 return false;
             }
+            stk.pop();
         }
-        return s.empty();
+        return true;
     }
 };
 ```

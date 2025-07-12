@@ -11,15 +11,7 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-
 class Solution {
-    void print_list(ListNode *head) {
-        while (head) {
-            cout << head->val << " ";
-            head = head->next;
-        }
-        cout << "\n";
-    }
 public:
     void reorderList(ListNode* head) {
         deque<ListNode *> dq;
@@ -28,22 +20,22 @@ public:
             dq.push_back(curr);
             curr = curr->next;
         }
-        curr = dq.front();
+        ListNode dummy(0, dq.front());
+        curr = &dummy;
         while (!dq.empty()) {
             curr->next = dq.front();
             dq.pop_front();
             curr = curr->next;
-            curr->next = NULL;
             if (dq.empty()) {
                 curr->next = NULL;
-            } else {
-                curr->next = dq.back();
-                dq.pop_back();
-                curr = curr->next;
-                curr->next = NULL;
+                return;
             }
+            curr->next = dq.back();
+            dq.pop_back();
+            curr = curr->next;
         }
-        // print_list(head);
+        curr->next = NULL;
+        return;
     }
 };
 ```

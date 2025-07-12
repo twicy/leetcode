@@ -13,29 +13,27 @@ class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
         ListNode *l1 = headA, *l2 = headB;
-        int diff = 0;
+
         while (l1 && l2) {
             l1 = l1->next;
             l2 = l2->next;
         }
-        if (l1) {
-            while (l1) {
-                l1 = l1->next;
-                diff++;
-            }
-            for (int i = 0; i < diff; i++) {
-                headA = headA->next;
-            }
-        } else if (l2) {
+
+        if (l2) {
             while (l2) {
-                l2 = l2->next;
-                diff++;
-            }
-            for (int i = 0; i < diff; i++) {
                 headB = headB->next;
+                l2 = l2->next;
             }
         }
-        while (headA && headA != headB) {
+        
+        if (l1) {
+            while (l1) {
+                headA = headA->next;
+                l1 = l1->next;
+            }
+        }
+
+        while (headA && headB && headA != headB) {
             headA = headA->next;
             headB = headB->next;
         }

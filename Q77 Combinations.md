@@ -2,22 +2,25 @@
 
 ```cpp
 class Solution {
-    std::vector<std::vector<int>> res;
-    void backtrack(int start, std::vector<int>& combination, int n, int k) {
-        if (combination.size() == k) {
-            res.push_back(combination);
+    vector<vector<int>> res;
+    void backtracking(vector<int> &curr, int i, int n, int k) {
+        if (curr.size() == k) {
+            res.push_back(curr);
             return;
         }
-        for (int num = start; num <= n; num++) {
-            combination.push_back(num);
-            backtrack(num + 1, combination, n, k);
-            combination.pop_back();
+        if (n - i + 1 < k - curr.size()) {
+            return;
+        }
+        for (int j = i; j <= n; j++) {
+            curr.push_back(j);
+            backtracking(curr, j + 1, n, k);
+            curr.pop_back();
         }
     }
 public:
     vector<vector<int>> combine(int n, int k) {
-        std::vector<int> comb;
-        backtrack(1, comb, n, k);
+        vector<int> curr;
+        backtracking(curr, 1, n, k);
         return res;
     }
 };
