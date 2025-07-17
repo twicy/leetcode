@@ -66,11 +66,23 @@
 - 491
   - can use a set/hashmap/array to track which element has been used
 - 46
+- 47
+- 51
+
+## Greedy
+
+- 376
 
 ## Dynamic Programming
 
 如果求组合数就是外层for循环遍历物品, 内层for遍历背包。
 如果求排列数就是外层for遍历背包, 内层for循环遍历物品。
-
+- 343
+- 96
 - 377
 - 416
+- 132
+
+## Graph
+
+- 332
