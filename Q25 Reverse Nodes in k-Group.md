@@ -1,7 +1,5 @@
 # Q25 Reverse Nodes in k-Group
 
-key is to write the correct `reverseKGroup_once` helper function
-
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -14,11 +12,10 @@ key is to write the correct `reverseKGroup_once` helper function
  * };
  */
 class Solution {
-    ListNode *reverseKGroup_once(ListNode *head, ListNode *tail) {
-        ListNode *prev = tail;
-        ListNode *curr = head, *next;
-
-        while (curr != tail) {
+    ListNode *reverse(ListNode *start, ListNode *end) {
+        ListNode *prev = NULL;
+        ListNode *curr = start, *next;
+        while (curr != end) {
             next = curr->next;
             curr->next = prev;
             prev = curr;
@@ -28,23 +25,15 @@ class Solution {
     }
 public:
     ListNode* reverseKGroup(ListNode* head, int k) {
-        ListNode dummy(0, head);
-        ListNode *prev = &dummy, *fast = head, *slow = head;
-        int counter;
-        while (fast != NULL) {
-            counter = k;
-            slow = fast;
-            ListNode *next_pev = prev->next;
-            while (counter-- != 0) {
-                if (fast == NULL) {
-                    return dummy.next;
-                }
-                fast = fast->next;
-            }
-            prev->next = reverseKGroup_once(slow, fast);
-            prev = next_pev;
+        if (!head) return NULL;
+        ListNode *fast = head;
+        for (int i = 0; i < k; i++) {
+            if (!fast) return head;
+            fast = fast->next;
         }
-        return dummy.next;
+        ListNode *res = reverse(head, fast);
+        head->next = reverseKGroup(fast, k);
+        return res;
     }
 };
 ```

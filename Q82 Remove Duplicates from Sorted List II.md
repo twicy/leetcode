@@ -32,3 +32,27 @@ public:
     }
 };
 ```
+
+```cpp
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        ListNode dummy(0, head);
+        ListNode *curr = &dummy;
+        while (curr->next && curr->next->next) {
+            ListNode *next = curr->next;
+            int val = next->val;
+            if (next->next && next->next->val == val) {
+                while (next->next && next->next->val == val) {
+                    next = next->next;
+                }
+                curr->next = next->next;
+                continue;
+            } else {
+                curr = curr->next;
+            }
+        }
+        return dummy.next;
+    }
+};
+```

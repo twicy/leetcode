@@ -10,13 +10,17 @@
 
 ## Linked List and Trees
 
-- 25
-- 206
-- 82
-- 92
-- 116
+- 23 Merge k Sorted Lists
+- 25 Reverse Nodes in k-Group
+- 61 Rotate List
+- 206 Reverse Linked List
+- 82 Remove Duplicates from Sorted List II
+- 92 Reverse Linked List II
+- 109 Convert Sorted List to Binary Search Tree
+- 114 Flattern Binary Tree to Linked List
+- 116 Populating Next Right Pointers in Each Node
 - 148
-- 142
+- 142 Linked List Cycle II
 
 ## HashMap
 
@@ -72,6 +76,10 @@
 ## Greedy
 
 - 376
+- 134
+- 135
+- 406
+- 452
 
 ## Dynamic Programming
 
@@ -86,3 +94,8 @@
 ## Graph
 
 - 332
+
+## Other
+
+- 11 Container With Most Water
+- 12 Integer to Roman
