@@ -61,7 +61,7 @@
 - 669
 - 116
 
-## Backtracking
+## Backtracking && Recursive
 
 - 77
 - 40
@@ -72,6 +72,8 @@
 - 46
 - 47
 - 51
+- 22 Generate Parentheses
+
 
 ## Greedy
 
@@ -97,5 +99,20 @@
 
 ## Other
 
+- 3 Longest Substring Without Repeating Characters
 - 11 Container With Most Water
 - 12 Integer to Roman
+- 15 3Sum
+- 29 Divide Two Integers
+- 30 Substring with Concatentation of All Words
+- 31 Next Permutation
+- 32 Longest Valid Parentheses
+- 41 First Missing Positive
+- 42 Trapping Rain Water
+- 43 Multiply Strings
+- 50 Pow(x, n)
+- 57 Insert Interval
+- 81 Search in Rotated Sorted Array II
+- 84 Largest Rectangle in Histogram
+- 87 Scramble String
+- 89 Gray Code
